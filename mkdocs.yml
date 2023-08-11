@@ -6,13 +6,13 @@ copyright: '© yamada'
 # use_directory_urls: false
 
 nav:
-  - HOME:
+  - ﾎｰﾑ:
     - index.md
-  - Tags:
+  - タグ:
     - tags.md
-  - Blog:
+  - ぶろぐ:
     - blog/index.md
-  - Research:
+  - 研究:
     - Research/index.md
 
 theme:
