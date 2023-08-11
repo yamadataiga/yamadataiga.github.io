@@ -1,0 +1,118 @@
+# title
+site_name: "mkdocs test"
+site_description: "yamada"
+docs_dir: 'docs'
+copyright: '© yamada'
+# use_directory_urls: false
+
+nav:
+  - HOME:
+    - index.md
+  - Tags:
+    - tags.md
+  - Blog:
+    - blog/index.md
+  - Research:
+    - Research/index.md
+
+theme:
+  name: material
+  font: # https://fonts.google.com/ のものを利用可能
+      text: 'Zen Maru Gothic'
+      code: 'Roboto Mono'
+  language: ja
+  feature:
+    tabs: true
+  icon:
+    logo: fontawesome/solid/computer
+    repo: fontawesome/brands/git-alt
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.sections # セクションを全て開く
+    - content.code.copy
+  favicon: /img/icon.ico
+  custom_dir: 'theme'
+  palette:
+    - scheme: slate
+      primary: black
+      accent: gray
+
+plugins:
+  - offline
+  - search
+  - git-revision-date-localized:  # 最終更新日表示
+      enabled: true
+      enable_creation_date: true  # 作成日
+      exclude:  # 無視するファイル
+        - index.md
+        - tags.md
+      locale: en
+      fallback_to_build_date: true
+  - mkdocs-video:  # 動画再生
+      video_autoplay: True
+  - tags:
+      tags_file: tags.md
+  # - git-authors:
+  #     enabled: true
+  #     sort_authors_by: contribution # 'contribution' or 'name'
+  #     fallback_to_empty: true       # If true, ignore non-git environment
+  #     show_email_address: false
+  #     exclude:
+  #       - tags.md
+  - blog:
+      blog_toc: true
+      post_date_format: full
+      archive_toc: true
+      categories_toc: true
+
+extra:
+  search:
+    language: 'en'
+  # extra:
+  #   analytics:
+  #     provider: google
+  #     property: G-HRYDC789BM
+  # consent:
+  #   title: Cookie consent
+  #   actions:
+  #     - accept
+  #     - reject
+  #     - manage
+  #   description: confirm.
+  social:
+    # https://fontawesome.com/  同形式で指定
+    - icon: fontawesome/brands/github
+      link: https://github.com/yamadataiga
+  generator: false
+extra_css:
+  - "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  - "css/custom.css"
+  - "css/scheme.css"
+
+extra_javascript: 
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+markdown_extensions:
+  - admonition            # 警告の有効化
+  - pymdownx.details      # 
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:  # 数式
+      generic: true
+  - attr_list             # リンクのボタン化
+  - tables                # 明示的な宣言
+  - pymdownx.superfences: # mermaidによるダイアグラム
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - footnotes
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde        # 打消し線の有効化
+  # - toc:
+  #     baselevel: 1      # default 1

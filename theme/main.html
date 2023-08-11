@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+<!-- Color -->
+{% block extrahead %}
+  <meta name="theme-color" content="#212121">
+  <link rel='icon' href='/assets/images/favicon.ico'>
+  <meta name='apple-mobile-web-app-capable' content='yes'>
+  <meta name='mobile-web-app-capable' content='yes'>
+  <link rel="manifest" href="/manifest.json">
+{% endblock %}
+
+<!-- Author -->
+{% block content %}
+  {{ super() }}
+  {% if git_page_authors %}
+    <div class="md-source-date">
+      <small>
+          Author: {{ git_page_authors | default('enable mkdocs-git-authors-plugin') }}
+      </small>
+    </div>
+  {% endif %}
+{% endblock %}
