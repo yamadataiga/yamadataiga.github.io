@@ -1,0 +1,50 @@
+dt {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+dd {
+    font-size: 0.9em; 
+}
+
+/* 見出しカスタム */
+/* 下線 */
+.md-typeset h1 {
+    /* font-weight: lighter;
+    border-bottom: 4px double;
+    padding-bottom: .1em; */
+    display: none;
+}
+.md-typeset h2 {
+    font-weight: bold;
+    border-bottom: 2px solid;
+}
+.md-typeset h3 {
+    border-bottom: 1px dashed;
+}
+.md-typeset h4 {
+    border-bottom: 0.5px dotted;
+}
+/* アイコン */
+.md-typeset > ::before {
+    display: inline-block !important;
+    font-family: "FontAwesome";
+    margin-right: .3em;
+}
+/* .md-typeset h1::before {
+    content: "\f02d" !important;
+} */
+/* .md-typeset h2::before {
+    content: "\f138" !important;
+} */
+/* .md-typeset h3::before {
+    content: "\f0da" !important;
+} */
+.md-typeset h4::before {
+    content: "\f0da" !important;
+}
+.md-typeset h5::before {
+    content: "\2d" !important;
+}
+.md-typeset h6::before {
+    content: "\2d" !important;
+}

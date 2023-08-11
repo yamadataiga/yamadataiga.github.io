@@ -1,0 +1,9 @@
+[data-md-color-scheme="slate"] {
+    --md-default-bg-color:      rgb(30,31,32);
+    --md-default-fg-color:      rgb(200,200,200);
+    --md-code-bg-color:         rgb(10,11,12);
+
+    /* footer */
+    --md-footer-bg-color:       rgb(10,11,12);
+    --md-footer-bg-color--dark: rgb(10,11,12);
+}
